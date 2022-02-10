@@ -40,7 +40,7 @@ resource "aws_eip" "eip_ngw_vpc_prod" {
 
 resource "aws_nat_gateway" "ngw_vpc_prod" {
   allocation_id = aws_eip.eip_ngw_vpc_prod.id
-  subnet_id     = aws_subnet.vpc_subnet_public_1.id
+  subnet_id     = aws_subnet.vpc_subnet_public_2.id
 
   tags = {
     Name = "NGW_vpc_prod"
